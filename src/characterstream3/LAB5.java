@@ -6,23 +6,16 @@ import java.util.logging.Logger;
 
 
 public class LAB5 {
-    public static void main(String[] args) {
-        try {   
-            FileReader file = new FileReader("data.txt");
-            BufferedReader input = new BufferedReader(file);
-            
-            
+    public static void main(String[] args) {  
+        InputStreamReader in = new InputStreamReader(System.in);
+        BufferedReader input = new BufferedReader(in);
+        System.out.print("Enter name: ");
+        try {
             String name = input.readLine();
-//            int age = (int) input.readLine();
-//            double weight = (double) input.readLine();
-//            double height = (double) input.readLine();
-              System.out.println(name);
-//            System.out.println(age);
-//            System.out.println(weight);
-//            System.out.println(height);
-            
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(LAB5.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(name);
+            System.out.print("Enter age:");
+            String age = input.readLine();
+            System.out.println(age);
         } catch (IOException ex) {
             Logger.getLogger(LAB5.class.getName()).log(Level.SEVERE, null, ex);
         }
